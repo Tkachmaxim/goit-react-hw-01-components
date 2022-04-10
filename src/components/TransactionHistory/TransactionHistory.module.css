@@ -7,7 +7,7 @@ tr {
 }
 
 table {
-    margin-top: 50px;
+
     margin-left: auto;
     margin-right: auto;
     width: 800px;
@@ -20,4 +20,8 @@ table {
 
 tr:nth-child(2n) {
     background-color: #e8edff;
+}
+
+.transactionHistory {
+    margin-top: 50px;
 }
