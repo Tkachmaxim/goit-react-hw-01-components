@@ -1,5 +1,4 @@
-ines (5 sloc)  52 Bytes
-   
+
 {
   "hooks": {
     "pre-commit": "lint-staged"
