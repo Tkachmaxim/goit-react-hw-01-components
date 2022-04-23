@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import s from './Friend.module.css';
 
-export default function FriendListItem({ isOnline, avatar, name, id }) {
+export default function FriendListItem({ isOnline, avatar, name }) {
   return (
-    <div key={id} className={s.item}>
+    <div className={s.item}>
       <span
         className={s.status}
         style={{ backgroundColor: isOnline ? 'green' : 'red' }}

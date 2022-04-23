@@ -8,14 +8,14 @@ export default function Statistics({ title, stats }) {
       {title && <h2 className="title">{title}</h2>}
 
       <ul className={s.statList}>
-        {stats.map(el => (
+        {stats.map(({ id, label, percentage }) => (
           <li
             className={s.item}
-            key={el.id}
+            key={id}
             style={{ backgroundColor: randomColor() }}
           >
-            <span className={s.label}>{el.label}</span>
-            <span className={s.percentage}>{el.percentage}</span>
+            <span className={s.label}>{label}</span>
+            <span className={s.percentage}>{percentage}</span>
           </li>
         ))}
       </ul>
@@ -27,9 +27,9 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };
